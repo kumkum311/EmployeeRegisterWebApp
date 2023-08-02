@@ -1,0 +1,74 @@
+<div class="container">
+	<div class="registration mx-auto d-block w-100">
+		<div class="page-header text-center">
+			<h1>Sign up</h1>
+		</div>
+
+		<form id="member-registration" class="form-validate form-horizontal well" enctype="multipart/form-data" [formGroup]="employeeForm" (ngSubmit)="registerEmployee()">
+			<fieldset>
+				<legend>Register Here!</legend>
+				<div class="form-group">
+					<label for="name">Name :</label>
+					<input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name" name="name">
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="userName">User Name :</label>
+					<input type="text" class="form-control" id="userName" placeholder="Enter UserName" formControlName="userName" name="userName">
+					<br>
+				</div>
+				<div class="form-group">
+					<label for="dateOfBirth">Date Of Birth :</label>
+					<input type="date" class="form-control" id="dateOfBirth" placeholder="Enter Date Of Birth" formControlName="dateOfBirth" name="dateOfBirth">
+					<br>
+				</div>
+
+				<div class="form-group">
+					<label for="gender">Gender :</label>
+					<input type="string" class="form-control" id="gender" placeholder="Enter gender" formControlName="gender" name="gender">
+					<br>
+				</div>
+
+				
+
+				<div class="form-group">
+					<label for="email">Email :</label>
+					<input type="email" class="form-control" id="email" placeholder="Enter Email" name="phone" formControlName="email">
+					<br> 
+
+				</div>
+				
+				<div class="form-group">
+					<label for="department">Department :</label>
+					<input type="text" class="form-control" id="department" placeholder="Enter Department" formControlName="department" name="department">
+					<br>
+				</div> 
+
+				<div class="form-group">
+					<label for="experience">Experience :</label>
+					<input type="number" class="form-control" id="experience" placeholder="Enter Experience" formControlName="experience" name="experience">
+					<br>
+				</div>
+				
+				
+
+				  
+
+				<div class="form-group">
+					<label for="password">Password :</label>
+					<input type="password" class="form-control" id="password" placeholder="Enter Password" formControlName="password" name="password">
+					<br> 
+
+				 </div>
+				<div class="d-flex justify-content-between align-items-center">
+					<div class="form-group d-flex justify-content-start">
+						<button type="submit" class="btn btn-primary">Submit</button>
+					</div>
+					<div id="emailHelp" class=" form-text text-center mb-5 text-dark">Already registered? <a
+							routerLink="login" class="text-dark fw-bold">Login</a>
+					</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+</div>
