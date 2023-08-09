@@ -11,6 +11,10 @@ import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
+import { EmployeeDetailComponent } from './dashboard/employee-detail/employee-detail.component';
+import { UpdateEmployeeComponent } from './dashboard/update-employee/update-employee.component';
+import { GetEmployeeComponent } from './dashboard/get-employee/get-employee.component';
+import { AgGridModule } from 'ag-grid-angular';
 
 @NgModule({
   declarations: [
@@ -20,14 +24,18 @@ import { ContactComponent } from './contact/contact.component';
     LoginComponent,
     DashboardComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    EmployeeDetailComponent,
+    UpdateEmployeeComponent,
+    GetEmployeeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AgGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]

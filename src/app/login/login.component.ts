@@ -45,7 +45,7 @@ export class LoginComponent {
         alert('login succesful');
 
         this.loginForm.reset();
-        this.route.navigate(['dashboard']);
+        this.route.navigate(['home']);
 
        
 
@@ -65,20 +65,7 @@ export class LoginComponent {
 
   }
 
-  //     this.service.addEmpLogin(this.loginForm.value).subscribe(result=>{
-  //     console.log(result);
-  //     this.loginForm.reset();
-  //     alert(`Login successfull`);
-  //     console.log(this.loginForm.value);
-  //   },
-  //   (error) => {
-  //     // Error callback
-  //     console.error("Error occurred:", error);
-  //     // Handle the error, show appropriate messages, or perform necessary actions
-  //   }
-  //   )
-
-  // }
+ 
 
   
   

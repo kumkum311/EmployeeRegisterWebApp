@@ -1,0 +1,106 @@
+<div class="container">
+
+    <div class="registration mx-auto d-block w-100">
+
+        <div class="page-header text-center">
+
+            <h1>Employee Details</h1>
+
+        </div>
+        <form [formGroup]="employeeDetailForm" (ngSubmit)="employeeSubmitted()" id="member-registration" class="form-validate form-horizontal well" enctype="multipart/form-data">
+
+            <fieldset>
+
+                <legend>Employee Details</legend>
+
+               
+
+                <div class="form-group">
+
+                    <label for="name">Name :</label>
+
+                    <input type="text" class="form-control" id="name" placeholder="Enter FullName" formControlName="name">
+                </div>
+
+                <div class="form-group">
+
+                    <label for="designation">Designation :</label>
+
+                    <input type="text" class="form-control" id="designation" placeholder="Enter Designation" formControlName="designation">
+
+                </div>
+
+                
+
+                <div class="form-group">
+
+                    <label for="addmission">Date of Joining :</label>
+
+                    <input type="date" class="form-control" id="dateOfJoining" placeholder="Enter Date of Joining" formControlName="dateOfJoining">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="contact">Contact :</label>
+
+                    <input type="text" class="form-control" id="contact" placeholder="Enter Phone" formControlName="contact">
+
+                </div>    
+
+                  <div class="form-group">
+
+                    <label for="address">Address :</label>
+
+                    <input type="text" class="form-control" id="address" placeholder="Enter Address" formControlName="address">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="skills">Skills :</label>
+
+                    <input type="text" class="form-control" id="skills" placeholder="Enter Skills" formControlName="skills">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label for="age">Age :</label>
+
+                    <input type="text" class="form-control" id="age" placeholder="Enter Age" formControlName="age">
+
+                </div>
+
+   
+
+                <div class="d-flex justify-content-between align-items-center">
+
+                    <div class="form-group d-flex justify-content-start">
+
+                        <button type="submit" class="btn btn-primary">Submit</button>&nbsp;&nbsp;&nbsp;
+                        <button class="btn btn-success" routerLink="/dashboard">Back</button>
+
+                    </div>
+                   
+
+                   
+
+
+                    
+
+                    <div id="emailHelp" class=" form-text text-center mb-5 text-dark">Already registered? <a
+
+                            routerLink="login" class="text-dark fw-bold">Login</a>
+
+                    </div>
+                    
+                </div>
+
+            </fieldset>
+
+        </form>
+
+    </div>
+
+</div>

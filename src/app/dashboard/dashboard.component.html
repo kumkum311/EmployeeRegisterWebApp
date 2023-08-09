@@ -1,2 +1,97 @@
-<p>dashboard works!</p>
+<!-- <div class="container-fluid" style="position: fixed;">
+    <div class="row flex-nowrap">
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                    <span class="fs-5 d-none d-sm-inline">Menu</span>
+                </a>
+                <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                    <li class="nav-item">
+                        <a routerLink="employee-detail" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Add Employee</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="update-employee" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Update Employee</span> </a>
+                    </li>
+                    
+                    
+                    <li>
+                       
+                        <a href="#" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-people"></i> <span class="ms-1 d-none d-sm-inline" routerLink="">Delete Employee</span> </a>
+                    </li>
+                   
+                </ul>
+                <hr>
+                
+            </div>
+        </div>
+        <div class="col py-3">
+           
+        </div>
+    </div>
+</div> -->
 
+
+
+<!-- <a href="#" style="text-decoration: none; color: black;"><h3 style="text-align: center;">Employee Details</h3></a>
+
+<table class="table table table-borderless" style="text-align: center;">
+    <thead class="table-dark">
+      <tr>
+        <th>Id</th> 
+        <th >Name</th>
+        <th>Designation</th>
+        <th>DOJ</th>
+        <th>Contact</th>
+        <th>Address</th>
+        <th>Skills</th>
+        <th>Age</th>
+        <th colspan="2">Actions</th>
+        <th><button type="button" class="btn btn-success" routerLink="employee-detail">Add Book</button></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employee">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.designation}}</td>
+        <td>{{emp.dateOfJoining}}</td> 
+        <td>{{emp.contact}}</td> 
+        <td>{{emp.address}}</td> 
+        <td>{{emp.skills}}</td>
+        <td>{{emp.age}}</td>  
+        <td><button type="button" class="btn btn-primary" routerLink="update-employee/{{emp.id}}">Edit</button></td>
+        <td><button type="button" class="btn btn-danger"  (click)="deleteEmployee(emp.id)">Delete</button></td>
+      </tr>
+      
+    </tbody>
+  </table>  -->
+
+  <ag-grid-angular
+
+class="ag-theme-alpine"
+
+style="height: 535px; width: 1500px; padding-top: 10px;"
+
+[rowData]="rowData$ | async"
+
+[columnDefs]="colDefs"
+
+[defaultColDef]="defaultColDef"
+
+[pagination]="true"
+
+[paginationPageSize]="10"
+>
+</ag-grid-angular>
+
+
+<div style="display: flex; gap: 10px;">
+    <button type="button" class="btn btn-success" routerLink="employee-detail" style="padding-right: 5px;">Add Employee</button>
+    <button type="button" class="btn btn-primary" routerLink="update-employee" style="padding-right: 5px;">Update Employee</button>
+    <button type="button" class="btn btn-danger" routerLink="employee-detail" style="padding-right: 5px;">Delete Employee</button>
+  </div>
+  
