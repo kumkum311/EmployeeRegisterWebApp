@@ -70,28 +70,39 @@
     </tbody>
   </table>  -->
 
-  <ag-grid-angular
+  <!-- Grid Concept-->
+  <!-- <h3 style="box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);text-align: center; margin-bottom: 10px;">Employee Details</h3>
+ <div class="example-header" hidden="hidden">
+   Selection:<span id="selectedRows"></span>
+ </div> -->
+ <div class="container">
+  <div class="header"><h3>Employee Details</h3></div>
+  <div class="example-header" hidden="hidden"> Selection: <span id="selectedRows"></span></div>
 
+<ag-grid-angular
 class="ag-theme-alpine"
-
-style="height: 535px; width: 1500px; padding-top: 10px;"
-
-[rowData]="rowData$ | async"
-
+style="height: 535px; width: 1200px; padding-top: 10px;"
+[rowData]="rowData"
 [columnDefs]="colDefs"
-
 [defaultColDef]="defaultColDef"
-
+[rowSelection]="rowSelection"
 [pagination]="true"
-
 [paginationPageSize]="10"
->
-</ag-grid-angular>
+(selectionChanged)="onSelectionChanged($event)"
+(gridReady)="onGridReady($event)"
+></ag-grid-angular> <!--[rowData]="rowData$|something"-->
+
+<div class="button-container">
+  <button class="btn btn-success" routerLink="employee-detail">Add Employee</button>
+  <button class="btn btn-primary" routerLink="update-employee/{{guidId}}">Update Employee</button>
+  <button class="btn btn-danger" (click)="deleteEmployee(guidId)">Delete Employee</button>
+</div>
+</div>
 
 
-<div style="display: flex; gap: 10px;">
+<!-- <div style="display: flex; gap: 10px;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); margin: auto;padding: auto; ">
     <button type="button" class="btn btn-success" routerLink="employee-detail" style="padding-right: 5px;">Add Employee</button>
-    <button type="button" class="btn btn-primary" routerLink="update-employee" style="padding-right: 5px;">Update Employee</button>
-    <button type="button" class="btn btn-danger" routerLink="employee-detail" style="padding-right: 5px;">Delete Employee</button>
+    <button type="button" class="btn btn-primary" routerLink="update-employee/{{guidId}}" style="padding-right: 5px;">Update Employee</button>
+    <button type="button" class="btn btn-danger" (click)="deleteEmployee(guidId)" style="padding-right: 5px;">Delete Employee</button>
   </div>
-  
+   -->
